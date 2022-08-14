@@ -1,0 +1,57 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+title: "pomotroid.theme.json"
+type: "object"
+required: # 必須のプロパティを定義
+  - "$schema"
+  - "name"
+  - "colors"
+properties:
+  $schema:
+    type: "string"
+  name:
+    type: "string"
+  colors:
+    type: "object"
+    required: # 必須のプロパティを定義
+      - --color-long-round
+      - --color-short-round
+      - --color-focus-round
+      - --color-background
+      - --color-background-light
+      - --color-background-lightest
+      - --color-foreground
+      - --color-foreground-darker
+      - --color-foreground-darkest
+      - --color-accent
+    properties:
+      --color-long-round:
+        type: "string"
+        format: "color"
+      --color-short-round:
+        type: "string"
+        format: "color"
+      --color-focus-round:
+        type: "string"
+        format: "color"
+      --color-background:
+        type: "string"
+        format: "color"
+      --color-background-light:
+        type: "string"
+        format: "color"
+      --color-background-lightest:
+        type: "string"
+        format: "color"
+      --color-foreground:
+        type: "string"
+        format: "color"
+      --color-foreground-darker:
+        type: "string"
+        format: "color"
+      --color-foreground-darkest:
+        type: "string"
+        format: "color"
+      --color-accent:
+        type: "string"
+        format: "color"
+additionalProperties: false
